@@ -17,9 +17,9 @@ if __name__ == "__main__":
         usrcompleteTask = []
 
         with open('{}.json'.format(usrID), 'w+') as file:
-            for todo in usrTASKS:
-                task = {"task": todo.get("title"),
-                    "completed": todo.get("completed"), "username": usrDATA}
+            for All in usrTASKS:
+                task = {"task": All.get("title"),
+                        "completed": All.get("completed"), "username": usrDATA}
                 usrcompleteTask.append(task)
             data = {usrID: usrcompleteTask}
             file.write(json.dumps(data))
